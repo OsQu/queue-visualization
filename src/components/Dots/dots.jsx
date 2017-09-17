@@ -4,11 +4,15 @@ import { select, selectAll } from "d3";
 
 export default class Dots extends React.Component {
   componentDidMount() {
-    select(this.node).selectAll("circle").style("fill", "orange");
+    select(this.node)
+      .selectAll("circle")
+      .style("fill", "orange");
   }
 
   componentDidUpdate() {
-    select(this.node).selectAll("circle").style("fill", "orange");
+    select(this.node)
+      .selectAll("circle")
+      .style("fill", "orange");
   }
 
   render() {
