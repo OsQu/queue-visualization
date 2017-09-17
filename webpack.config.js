@@ -1,5 +1,5 @@
 const path = require("path");
-const context = path.resolve(__dirname, 'src');
+const context = path.resolve(__dirname, "src");
 
 module.exports = {
   entry: "./src/index.jsx",
@@ -11,6 +11,10 @@ module.exports = {
   devServer: {
     contentBase: "./dist"
   },
+  resolve: {
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
+    extensions: [".js", ".json", ".jsx"]
+  },
   module: {
     rules: [
       {
@@ -21,16 +25,16 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
+          "style-loader",
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               importLoaders: 1,
               modules: true,
-              localIdentName: '[path]___[name]__[local]___[hash:base64:5]'
+              localIdentName: "[path]___[name]__[local]___[hash:base64:5]"
             }
           },
-          'sass-loader'
+          "sass-loader"
         ]
       }
     ]
