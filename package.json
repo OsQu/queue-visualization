@@ -33,6 +33,7 @@
     "test": "mocha --require spec/browser.js './src/**/*.spec.js?(x)'"
   },
   "dependencies": {
+    "baconjs": "^0.7.95",
     "d3": "^4.10.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
