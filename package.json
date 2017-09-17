@@ -1,9 +1,11 @@
 {
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-react-css-modules": "^3.3.0",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
@@ -13,6 +15,8 @@
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-prettier": "^2.2.0",
     "expect.js": "^0.3.1",
+    "flow-bin": "^0.54.1",
+    "flow-typed": "^2.1.5",
     "jsdom": "^11.2.0",
     "lodash": "^4.17.4",
     "mocha": "^3.5.3",
@@ -30,12 +34,12 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "test": "mocha --require spec/browser.js './src/**/*.spec.js?(x)'"
+    "test": "NODE_PATH=./src mocha --require spec/browser.js './spec/**/*.spec.js' './src/**/*.spec.js?(x)'"
   },
   "dependencies": {
-    "baconjs": "^0.7.95",
     "d3": "^4.10.2",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "rxjs": "^5.4.3"
   }
 }
