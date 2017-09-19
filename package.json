@@ -34,7 +34,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "test": "NODE_PATH=./src mocha --require spec/browser.js './spec/**/*.spec.js' './src/**/*.spec.js?(x)'"
+    "test": "NODE_PATH=./src mocha --compilers js:babel-core/register --require spec/browser.js './spec/**/*.spec.js' './src/**/*.spec.js?(x)'"
   },
   "dependencies": {
     "d3": "^4.10.2",

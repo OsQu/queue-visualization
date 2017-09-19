@@ -13,6 +13,25 @@ function copyProps(src, target) {
 }
 
 global.window = window;
+
+// Copy missing globals for rxjs in tests
+global.window.Object = Object;
+global.window.Array = Array;
+global.window.Date = Date;
+global.window.Function = Function;
+global.window.Math = Math;
+global.window.Number = Number;
+global.window.Object = Object;
+global.window.RegExp = RegExp;
+global.window.String = String;
+global.window.Uint8Array = Uint8Array;
+global.window.WeakMap = WeakMap;
+global.window.Set = Set;
+global.window.Error = Error;
+global.window.TypeError = TypeError;
+global.window.parseInt = parseInt;
+global.window.parseFloat = parseFloat;
+
 global.document = window.document;
 global.navigator = {
   userAgent: "node.js"

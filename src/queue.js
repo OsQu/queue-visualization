@@ -1,9 +1,9 @@
 // @flow
 
-type ArrivalProcess = () => void;
-type ServerProcess = () => void;
+import type { Observable } from "rxjs";
 
 export default class Queue {
-  constructor(arrives: ArrivalProcess, server: ServerProcess) {
+  constructor(arrives: Observable<number>, server: Observable<number>) {
+    console.log("HERE");
   }
 }
